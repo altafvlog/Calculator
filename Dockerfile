@@ -1,7 +1,8 @@
-FROM openjdk:8-alpine3.7
+FROM openjdk:8
 MAINTAINER altaf@gmail.com
-WORKDIR /usr/src/myapp/
-COPY . /usr/src/myapp/
+WORKDIR /src/myapp/
+COPY . /src/myapp/
 COPY . .
-EXPOSE 8000
-ENTRYPOINT ["java","-jar","./calculator.java"]
+EXPOSE 8085
+ENTRYPOINT ["java","-jar","calculator.java"] 
+CMD ["java,"caculator App"]
